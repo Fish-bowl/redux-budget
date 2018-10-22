@@ -1,15 +1,26 @@
-<<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <script src="https://" ></script>
-  <script src="main.js"></script>
-</head>
-<body>
-  
-</body>
+  <head>
+    <link rel="stylesheet" href="./styles.css"/>
+  </head>
+  <body>
+    <form>
+      <label>Amt:</label>
+      <input
+        type'number
+        min='0'
+        name='amt'
+        required
+      />
+      <label>Description</label>
+      <select name='type'>
+        <option>Debit</option>
+        <option>Credit</option>
+      </select>
+      <button>Add Entry</button>
+    </form>
+    <ul id="history" >
+    </ul>
+    <script src="https://unpkg.com/redux@4.0.0/dist/redux.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
 </html>
