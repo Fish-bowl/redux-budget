@@ -1,26 +1,44 @@
 <html>
-  <head>
-    <link rel="stylesheet" href="./styles.css"/>
-  </head>
-  <body>
-    <form>
-      <label>Amt:</label>
-      <input
-        type'number
-        min='0'
-        name='amt'
-        required
-      />
-      <label>Description</label>
-      <select name='type'>
-        <option>Debit</option>
-        <option>Credit</option>
-      </select>
-      <button>Add Entry</button>
-    </form>
-    <ul id="history" >
-    </ul>
-    <script src="https://unpkg.com/redux@4.0.0/dist/redux.min.js"></script>
-    <script src="./main.js"></script>
-  </body>
+
+<head>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div id="container">
+    <div id="balance">
+      <h1>Ledger</h1>
+      <form id="add_entry">
+        <label>Amt:</label>
+        <input type="number" min="0" name="amt" required />
+        <label>Description</label>
+        <input name="description" />
+        <select name="type">
+          <option>Debit</option>
+          <option>Credit</option>
+        </select>
+        <button>Add Entry</button>
+      </form>
+
+      <ul id="history">
+      </ul>
+
+      <h1 id="total">$0</h1>
+    </div>
+    <div id="wish_list">
+      <h1>Items</h1>
+      <form id="add_item">
+        <label>Cost:</label>
+        <input name="cost" type="number" min="0" required />
+        <label>Description:</label>
+        <input name="description" required />
+        <button>Add Item</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/redux@4.0.0/dist/redux.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+
 </html>
